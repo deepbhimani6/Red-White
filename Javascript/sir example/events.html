@@ -1,0 +1,70 @@
+<form name="formData">
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" name="phone"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="save()" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+
+<table border="1" id="tbldata">
+</table>
+
+<script type="text/javascript">
+
+    //Events
+    let data = [];
+
+    let viewData = () =>
+    {
+        let row = "";
+        row += "<tr>";
+            row +="<td>Name</td>";
+            row +="<td>Email</td>";
+            row +="<td>Phone</td>";
+        row += "</tr>"
+        for(let i in data)
+        {
+            row += "<tr>";
+                row += "<td>"+data[i].name+"</td>";
+                row += "<td>"+data[i].email+"</td>";
+                row += "<td>"+data[i].phone+"</td>";
+            row += "</tr>";
+        }
+        document.getElementById('tbldata').innerHTML = row;
+    }
+
+    viewData();
+    let  save = () =>
+    {
+       let username = document.forms['formData']['name'].value;
+       let useremail = document.forms['formData']['email'].value;
+       let userphone = document.forms['formData']['phone'].value;
+
+       let obj = {
+            name : username,
+            email : useremail,
+            phone : userphone
+       }
+
+       data.push(obj);
+       alert("User successfully create");
+       document.forms['formData']['name'].value = " ";
+       document.forms['formData']['email'].value = " ";
+       document.forms['formData']['phone'].value = " ";
+       viewData(); 
+    }
+
+</script>

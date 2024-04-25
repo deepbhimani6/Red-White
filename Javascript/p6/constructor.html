@@ -1,0 +1,79 @@
+<form name="formdata">
+    <table border="1">
+        <tr>
+            <td>Email :- </td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Password :- </td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="login()" value="Login"></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javascript">
+
+    let data = [
+        {
+            email : "dhaval@gmail.com",
+            password : "12345"
+        },
+        {
+            email : "deep@gmail.com",
+            password : "678910"
+        },
+        {
+            email : "hemang@gmail.com",
+            password : "123789"
+        }];
+
+    let login = () => {
+
+        class Login{
+
+            constructor(email,password){
+                
+                let msg = "";
+                let isEmailValid = undefined;
+
+                for (let i in data){
+
+                    if (email == data[i].email){
+
+                        isEmailValid = true;
+
+                        if(password == data[i].password){
+                            msg = 1;
+                            break;
+                        }
+                        else{
+                            msg = 2;
+                        }
+                    }
+                }
+                if(isEmailValid == true){
+                    if(msg == 1){
+                    alert("Login sucessfully");
+                    }
+                    else if(msg == 2){
+                        alert("plese enter valid password..!");
+                    }
+                }
+                else{
+
+                    alert("plese enter valid email or password..!");
+                }
+            }
+        }
+
+        let email = document.forms['formdata']['email'].value;
+        let password = document.forms['formdata']['password'].value;
+
+        let obj = new Login(email,password);
+    }
+
+</script>

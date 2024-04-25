@@ -1,0 +1,29 @@
+<table border="1">
+    <input type="hidden" id="edit_id" />
+    <tr>
+        <td>Name :- </td>
+        <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+        <td>Email :- </td>
+        <td><input type="text" id="email"></td>
+    </tr>
+    <tr>
+        <td>Phone :- </td>
+        <td><input type="text" id="phone"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="submit" id="submitButton" onclick="save()">
+            <input type="button" value="Edit" id="editButton" onclick="edit()">
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1" id="tbldata">
+</table>
+
+<script src="index.js" type="text/javascript"></script>

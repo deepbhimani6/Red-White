@@ -1,0 +1,57 @@
+<table border="1" id="tbldata">
+</table>
+
+<script type="text/javascript">
+
+    let data = [
+        {
+            name : "hiren",
+            email : "hiren@gmail.com",
+            phone : 12345,
+            course : [
+                "c",
+                "c++"
+            ]
+        },
+        {
+            name : "kaushik",
+            email : "kaushik@gmail.com",
+            phone : 87654,
+            course : [
+                "java",
+                "php"
+            ]
+        },
+        {
+            name : "hardik",
+            email : "hardik@gmail.com",
+            phone : 112233,
+            course : [
+                "react js",
+                "node js"
+            ]
+        }
+    ];
+
+    let row ="";
+    
+    row += "<tr>";
+        row += "<th>Name</th>";
+        row += "<th>Email</th>";
+        row += "<th>Phone</th>";
+        row += "<th>Course</th>";
+    row += "</tr>";
+
+    for(let i in data)
+    {
+        row += "<tr>";
+            row += "<td>"+data[i].name+"</td>";
+            row += "<td>"+data[i].email+"</td>";
+            row += "<td>"+data[i].phone+"</td>";
+            row += "<td>"+data[i].course+"</td>";
+        row += "</tr>";
+    }
+
+    document.getElementById('tbldata').innerHTML = row;
+
+</script>

@@ -1,0 +1,67 @@
+<form name="data">
+    <table border="1">
+        <tr>
+            <td>Email : </td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Password : </td>
+            <td><input type="password" name="password"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Login" onclick="login()"/></td>
+        </tr>
+    </table>
+</form>
+
+
+<script type="text/javascript">
+
+    let data = [
+        {
+            email : "karan@gmail.com",
+            password : "1234"
+        },
+        {
+            email : "darshit@gmail.com",
+            password : "4567"
+        }
+    ];
+
+    let login = () =>{
+
+        class Login{
+
+            constructor(email,password)
+            {
+                let msg= "";
+                for(let i in data)
+                {
+                    if(data[i].email == email && data[i].password == password)
+                    {
+                        msg=1;
+                        break;
+                    }
+                }
+
+                if(msg==1)
+                {
+                    alert("Login successfully");
+                }
+                else{
+                    alert("You are not login successfully");
+                }
+            }
+        }
+
+        let email = document.forms['data']['email'].value;
+        let password = document.forms['data']['password'].value;
+
+        let obj = new Login(email,password);
+    }
+
+        
+    
+
+</script>

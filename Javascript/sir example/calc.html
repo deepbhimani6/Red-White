@@ -1,0 +1,47 @@
+<form name="clac">
+    <table border="1">
+        <tr>
+            <td><input type="text" name="ans"/></td>
+        </tr>
+       
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="clac.ans.value+='1'"/>
+                <input type="button" value="2" onclick="clac.ans.value+='2'"/>
+                <input type="button" value="3" onclick="clac.ans.value+='3'"/>
+                <input type="button" value="+" onclick="clac.ans.value+='+'"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="clac.ans.value+='4'"/>
+                <input type="button" value="5" onclick="clac.ans.value+='5'"/>
+                <input type="button" value="6" onclick="clac.ans.value+='6'"/>
+                <input type="button" value="-" onclick="clac.ans.value+='-'"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="clac.ans.value+='7'"/>
+                <input type="button" value="8" onclick="clac.ans.value+='8'"/>
+                <input type="button" value="9" onclick="clac.ans.value+='9'"/>
+                <input type="button" value="*" onclick="clac.ans.value+='*'"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" onclick="clac.ans.value+='0'"/>
+                <input type="button" value="." onclick="clac.ans.value+='.'"/>
+                <input type="button" value="/" onclick="clac.ans.value+='/'"/>
+                <input type="button" value="=" onclick="clac.ans.value = eval(clac.ans.value)"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="clear" onclick="clac.ans.value = ' '"></td>
+            <td><input type="button" value="C" onclick="clac.ans.value = clac.ans.value.slice(0, -1)"></td>
+        </tr>
+
+    </table>
+</form>

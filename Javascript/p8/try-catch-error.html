@@ -1,0 +1,134 @@
+<form name="data">
+    <table border="1">
+        <tr>
+            <td>Name :- </td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Email :- </td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Phone :- </td>
+            <td><input type="phone" name="phone"></td>
+        </tr>
+        <tr>
+            <td>Password :- </td>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Login" onclick="nameFunction()"></td>
+        </tr>
+    </table>
+</form>
+
+<script type="text/javaScript">
+
+    let name = document.forms['data']['name'];
+    let email = document.forms['data']['email'];
+    let phone = document.forms['data']['phone'];
+    let password = document.forms['data']['password']
+
+    function nameFunction() {
+
+        let nameValue = name.value;
+            let Uppercase = /[A-Z]/g;
+            let digit = /[0-9]/g;
+            let spacial_char = /[^a-zA-Z0-9]/g;
+
+        let emailValue = email.value;
+            let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        let phoneValue = phone.value;
+            let phoneFormat = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+
+        let passwordValue = password.value;
+        
+        let doesFormHasError = undefined;
+
+        try {
+            // name errors
+            if (nameValue == "") {
+                formHasError = true;
+                alert("name is required");
+            }
+            else if (nameValue.match(Uppercase) && nameValue.match(digit) && nameValue.match(spacial_char)) {
+                formHasError = true;
+                alert("you can't enter Uppercase & digit & spacial_char");
+            }
+            else if (nameValue.match(Uppercase) && nameValue.match(digit)) {
+                formHasError = true;
+                alert("you can't enter Uppercase & digit");
+            }
+            else if (nameValue.match(Uppercase) && nameValue.match(spacial_char)) {
+                formHasError = true;
+                alert("you can't enter Uppercase & spacial_char");
+            }
+            else if (nameValue.match(digit) && nameValue.match(spacial_char)) {
+                formHasError = true;
+                alert("you can't enter digit & spacial_char");
+            }
+            else if (nameValue.match(Uppercase)) {
+                formHasError = true;
+                alert("you can't enter uppercase");
+            }
+            else if (nameValue.match(digit)) {
+                formHasError = true;
+                alert("you can't enter digit");
+            }
+            else if (nameValue.match(spacial_char)) {
+                formHasError = true;
+                alert("you can't enter spacial char");
+            }
+
+            // email errors
+            if (emailValue == "") {
+                formHasError = true;
+                alert("email is required");
+            }
+            else if (!emailValue.match(emailFormat)) {
+                formHasError = true;
+                alert("email is not valid");
+            }
+
+            // phone errors
+            if (phoneValue == "") {
+                formHasError = true;
+                alert("phone no. is required");
+            }
+            else if (!phoneValue.match(phoneFormat)) {
+                formHasError = true;
+                alert("phone no. is not valid");
+            }
+
+            // password errors
+            if (passwordValue == "") {
+                formHasError = true;
+                alert("password is required");
+            }
+            else if (passwordValue.length < 8) {
+                formHasError = true;
+                alert("your password must 8 to 15 char");
+            }
+            else if (passwordValue.length > 15) {
+                formHasError = true;
+                alert("your password must 8 to 15 char");
+            }
+
+            // all are sucessfull
+            if (doesFormHasError == undefined) {
+                alert("Your application is successfully running");
+            }
+        }
+        catch (error) {
+            if (error != "") {
+                alert(error);
+            }
+            else {
+                alert("system error");
+            }
+        }
+    }
+
+</script>

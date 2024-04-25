@@ -1,0 +1,56 @@
+<table border="1" id="tbldata">
+
+</table>
+
+
+<script type="text/javascript">
+
+
+    let data = [
+        {
+            name : "piyush",
+            email : "piyush@gmail.com",
+            phone : 12345
+        },
+        {
+            name : "keval",
+            email : "keval@gmail.com",
+            phone : 33445
+        }
+    ];
+
+    
+    let name = prompt("Enter your name");
+    let email = prompt("Enter your email :- ");
+    let phone = prompt("Enter your phone no :- ");
+
+    let obj = {
+        name : name,
+        email : email,
+        phone : phone
+    }
+
+    data.push(obj);
+
+    console.log(data);
+
+    let row = "";
+    row += `<tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>`;
+
+
+    for(let i in data)
+    {
+        row += `<tr>
+                    <td>${data[i].name}</td>
+                    <td>${data[i].email}</td>
+                    <td>${data[i].phone}</td>
+                </tr>`;
+    }
+
+    document.getElementById('tbldata').innerHTML = row;
+    
+</script>

@@ -1,0 +1,47 @@
+<script type="text/javascript">
+
+
+    function name(callback)
+    {
+        setTimeout(()=>{
+            console.log("Name");
+            callback();
+        },1000);
+       
+    }
+    function email(callback)
+    {
+        setTimeout(()=>{
+            console.log("Email");
+            callback();
+        },2000);
+    }
+    function password(callback)
+    {
+        setTimeout(()=>{
+            console.log("Password");
+            callback();
+        },1000);
+    }
+    function login()
+    {
+        setTimeout(()=>{
+            console.log("Login");
+        },4000);
+    }
+
+    name(function(){
+        email(function(){
+            password(function(){
+                login();
+            });
+        });
+        
+    });
+   
+
+    console.log("All function are running");
+
+
+
+</script>

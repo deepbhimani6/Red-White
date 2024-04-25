@@ -1,0 +1,46 @@
+z <script type="text/javascript">
+
+    function burgar()
+    {
+        let cnt=0;
+        let a = setInterval(()=>{
+            cnt++;
+            console.log("burgar : "+cnt);
+            if(cnt==10)
+            {
+                clearInterval(a);
+            }
+        },1000);
+    }
+
+    function pizza()
+    {
+        let cnt=0;
+        let a = setInterval(()=>{
+            cnt++;
+            console.log("pizza : "+cnt);
+            if(cnt==10)
+            {
+                clearInterval(a);
+            }
+        },3000);
+    }
+
+    function panipuri()
+    {
+        let cnt=0;
+        let a = setInterval(()=>{
+            cnt++;
+            console.log("panipuri : "+cnt);
+            if(cnt==10)
+            {
+                clearInterval(a);
+            }
+        },2000);
+    }
+
+    burgar();
+    pizza();
+    panipuri();
+
+</script>

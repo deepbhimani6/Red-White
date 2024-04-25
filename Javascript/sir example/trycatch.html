@@ -1,0 +1,36 @@
+<script type="text/javascript">
+
+
+    var a=10,b=2;
+
+    try
+    {
+        if(b == 0)
+        {
+            throw "You not divided by zero";
+        }
+        else if(b < 0)
+         {
+            throw "You not input in a negetive element";
+         }
+         else{
+            var ans = a / b;
+            console.log("Ans = "+ans);
+            console.log("Your application is successfully running");
+         }
+    }
+    catch(err)
+    {   
+        if(err != "")
+        {
+            console.log(err);
+        }
+        else{
+            console.log("System err");
+        }
+        
+    }
+
+    
+
+</script>

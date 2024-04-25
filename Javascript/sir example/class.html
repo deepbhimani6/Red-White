@@ -1,0 +1,63 @@
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter no A : ")); 
+    var b = parseInt(prompt("Enter no B : "));
+     
+    class Demo
+    {
+        sum() //member function
+        {
+            //var a=10,b=5;
+            var c = a + b; //data member
+            console.log("Ans = "+c);
+        }
+
+        min()
+        {
+            //var a=10,b=5;
+            var c = a-b;
+            console.log("Ans = "+c);
+        }
+
+        mul()
+        {
+            //var a= 10,b=5;
+            var c = a * b;
+            console.log("Ans = "+c); 
+        }
+
+        div()
+        {
+            var c = a / b;
+            console.log("Ans = "+c);
+        }
+
+        check(a,b)
+        {
+            if(a > b)
+            {
+                console.log("A is Big");
+            }
+            else{
+                console.log("B is Big");
+            }
+        }
+    }
+    
+
+    let obj = new Demo();
+    obj.sum();
+    obj.min();
+    obj.mul();
+    obj.div();
+    obj.check(a,b);
+
+
+
+
+
+    
+
+
+
+</script>

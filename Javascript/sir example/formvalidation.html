@@ -1,0 +1,84 @@
+<form>
+    <table border="1">
+        <tr>
+            <td>Name : </td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td>Phone : </td>
+            <td><input type="text" id="phone"></td>
+        </tr>
+        <tr>
+            <td>Password : </td>
+            <td><input type="text" id="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="submit" onclick="save()"></td>
+        </tr>
+    </table> 
+</form>
+<script type="text/javascript">
+
+    function save()
+    {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let phone = document.getElementById('phone').value;
+        let password = document.getElementById('password').value;
+
+        if(name == "")
+        {
+            alert("Name is required");
+        }
+        else if(name >='A' && name <= 'Z' )
+        {
+            alert("Name not fill capital charecter");
+        }
+        else if(name >= 'a' && name <= 'z'){
+        }
+        else if(name >= '0' && name <='9')
+        {
+            alert("Name not fill number charecter");
+        }
+        else{
+            alert("Name not fill special charecter");
+        }
+
+        if(email == "")
+        {
+            alert("Email is required");
+        }
+        else
+        {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(email.match(mailformat))
+            {
+                alert("Email is valid");
+            }
+            else{
+                alert("Email is not valid")
+            }
+        }
+        if(phone == "")
+        {
+            alert("phone is required");
+        }
+        else{
+            
+        }
+
+        if(password == "")
+        {
+            alert("password is required");
+        }
+    }
+
+
+
+</script>
+
