@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student register</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+
+</head>
+
+<style>
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+        font-size: 1rem;
+        line-height: 2.15;
+        padding-left: .75em;
+        padding-right: .75em;
+    }
+
+    .card-registration .select-arrow {
+        top: 13px;
+    }
+</style>
+
+<body>
+
+    <section class="h-100 bg-dark">
+        <form id="studentRegister" method="post">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card card-registration">
+                        <div class="row g-0">
+
+                            <div class="col-xl-6">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">Student registration form</h3>
+
+                                    <div class="row">
+                                        <div class="col-xl-6 mb-4">
+                                            <div>
+                                                <input id="firstName" name="firstName" type="text" id="form3Example3"
+                                                    class="form-control form-control-lg" placeholder="First name">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 mb-4">
+                                            <div>
+                                                <input id="lastName" type="text" id="form3Example3"
+                                                    class="form-control form-control-lg" placeholder="Last name">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <input id="email" type="email" id="form3Example3"
+                                            class="form-control form-control-lg" placeholder="Email address">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <input id="password" type="password" id="form3Example3"
+                                            class="form-control form-control-lg" placeholder="Password">
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <input id="phone" type="phone" id="form3Example3"
+                                            class="form-control form-control-lg" placeholder="Phone no.">
+                                    </div>
+
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                        <h6 class="mb-0 me-4">Gender</h6>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="femaleGender" value="female" />
+                                            <label class="form-check-label" for="femaleGender">Female</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="maleGender" value="male" />
+                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mb-0">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                id="otherGender" value="other" />
+                                            <label class="form-check-label" for="otherGender">Other</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-4 mb-2">
+                                            <div class="form-outline">
+                                                <input id="c" name="course" class="form-check-input me-2" type="checkbox"
+                                                    value="C">
+                                                <label class="form-check-label" for="otherGender">c</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 mb-2">
+                                            <div class="form-outline">
+                                                <input id="cPlusPlus" name="course" class="form-check-input me-2" type="checkbox"
+                                                    value="C++">
+                                                <label class="form-check-label" for="otherGender">c++</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 mb-2">
+                                            <div class="form-outline">
+                                                <input id="html" name="course" class="form-check-input me-2" type="checkbox"
+                                                    value="Html">
+                                                <label class="form-check-label" for="otherGender">html</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 mb-2">
+                                            <div class="form-outline">
+                                                <input id="css" name="course" class="form-check-input me-2" type="checkbox"
+                                                    value="Css">
+                                                <label class="form-check-label" for="otherGender">css</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 mb-2">
+                                            <div class="form-outline">
+                                                <input id="Javascript" name="course" class="form-check-input me-2" type="checkbox"
+                                                    value="Javascript">
+                                                <label class="form-check-label" for="otherGender">javascript</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 mb-2">
+                                            <div class="form-outline">
+                                                <input id="React_js" name="course" class="form-check-input me-2" type="checkbox"
+                                                    value="React js">
+                                                <label class="form-check-label" for="otherGender">react js</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-end pt-3">
+                                        <button onclick="resetAll()" type="button" class="btn btn-light btn-lg">Reset all</button>
+                                    <button onclick="studentRegister()"  type="button" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                    <!-- <button  type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button> -->
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 d-xl-block">
+                                <img src="images/1.png" alt="Sample photo" class="img-fluid"
+                                    style="width: 100%;border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>submit  </button>
+    </form>
+    </section>
+
+    <script src="student_registration.js"></script>
+
+</body>
+
+</html>

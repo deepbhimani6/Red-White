@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile change page</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<style>
+    body {
+        margin-top: 20px;
+    }
+
+    .avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    .border-radius {
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+
+    <div class="container bootstrap snippets bootdey">
+        <h1 class="text-primary">Edit Profile</h1>
+        <hr>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div id="showImage"></div>
+                    <p class="mt-2 mb-1">Upload a different photo...</p>
+                    <input id="imgName" type="file" class="form-control">
+                </div>
+            </div>
+
+            <!-- edit form column -->
+            <div class="col-md-8 ms-4 personal-info">
+                <div class="alert alert-info alert-dismissable">
+                    <i class="fa fa-coffee"></i>
+                    This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                </div>
+                <h3>Personal info</h3>
+
+                <form class="form-horizontal" role="form">
+                    <div class="row">
+                        <input id="uniqueIdHidden" type="hidden" class="form-control form-control-lg" disabled />
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input id="firstName" type="text" class="form-control form-control-lg">
+                                <label class="col-lg-3 control-label">First name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input id="lastName" type="text" class="form-control form-control-lg">
+                                <label class="col-lg-3 control-label">Last name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="width: 100%;" class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input id="email" type="email" id="form3Example3" class="form-control form-control-lg">
+                                <label class="col-lg-3 control-label">Email address</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div style="width: 100%;" class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <input id="phone" type="phone" class="form-control form-control-lg">
+                                <label class="col-lg-3 control-label">Phone</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center text-lg-start pt-2">
+                        <button onclick="changeProfile()" type="button" class="btn btn-primary btn-lg mb-2"
+                            style="width: 100%; padding-left: 2.5rem; padding-right: 2.5rem;">Submit</button>
+                        <p onclick="backHome()" class="small fw-bold pt-1 mb-0">Back to <a class="link-danger">Home</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <script src="faculty_profile_change.js"></script>
+
+</body>
+
+</html>
