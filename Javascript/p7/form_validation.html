@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login form</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(https://wallpaperaccess.com/full/627165.jpg);
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        background-color: transparent;
+        padding: 30px;
+        border: 5px solid black;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(5px);
+    }
+
+    form input {
+        color: white;
+        background-color: transparent;
+        font-size: 20px;
+        border: none;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    form input::placeholder {
+        color: white;
+    }
+
+    .btn {
+        font-size: 20px;
+        background-color: black;
+        color: red;
+        border: 1px solid aqua;
+        padding: 10px;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+
+    <form name="formdata">
+        <h1>Login</h1>
+
+        <input type="text" placeholder="Name" name="name"> <!-- name = not Uppercase & number & spacial char -->
+
+        <input type="email" placeholder="Email" name="email"> <!-- email = valid & not empty -->
+
+        <input type="phone" placeholder="Phone No." name="phone"> <!-- phone = max=10 number & not out of number -->
+
+        <input type="password" placeholder="Password" name="password"> <!-- password = min=8 char & max=15 char -->
+
+        <input class="btn" type="button" value="Login" onclick="Login()">
+    </form>
+
+    <!-- javascript -->
+    <script type="text/javascript">
+
+        let name = document.forms['formdata']['name'];
+        let email = document.forms['formdata']['email'];
+        let phone = document.forms['formdata']['phone'];
+        let password = document.forms['formdata']['password'];
+
+        function Login() {
+
+            let nameValue = name.value;
+            let emailValue = email.value;
+            let phoneValue = phone.value;
+            let passwordValue = password.value;
+            let doesFormHasError = undefined;
+
+            if (nameValue == "") {
+
+                doesFormHasError = true;
+
+                // Name was empty
+                alert("please name is required");
+            }
+            else {
+                let nameFormet = /^[a-z]+$/;
+
+                if (nameValue.match(nameFormet)) { }
+                else {
+                    doesFormHasError = true;
+
+                    alert("name is not valid");
+                    // Remove all char
+                    name.value = name.value.replace(/[a-zA-Z]/g, '');
+                    // Remove all spacial char & digit (aana(a-zA-Z) sivay(^) remove )
+                    name.value = name.value.replace(/[^a-zA-Z]/g, '');
+                }
+            }
+
+            if(emailValue == ""){
+
+                doesFormHasError = true;
+
+                // Email was empty
+                alert("please email is required");
+            }
+            else{
+                // Email valid format
+                let mailFormet = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                if(emailValue.match(mailFormet)){}
+                else{
+
+                    doesFormHasError = true;
+
+                    alert("email is not valid");
+                    // Remove all char
+                    email.value = email.value.replace(/[a-zA-Z]/g,'');
+                    // Remove all spacial char & digit (aana(a-zA-Z) sivay(^) remove )
+                    email.value = email.value.replace(/[^a-zA-Z]/g,'');
+                }
+            }
+
+            if(phoneValue == ""){
+
+                doesFormHasError = true;
+
+                // Phone was empty
+                alert("please phone no. is required");
+              }
+            else{
+
+                // Phone num valid format
+                let phoneFormat = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+
+                if(phoneValue.match(phoneFormat)){}
+                else{
+
+                    doesFormHasError = true;
+
+                    alert("phone no. is not valid");
+                    // Remove all char
+                    phone.value = phone.value.replace(/[a-zA-Z]/g,'');
+                    // Remove all spacial char & digit (aana(a-zA-Z) sivay(^) remove )
+                    phone.value = phone.value.replace(/[^a-zA-Z]/g,'');
+                }
+            }
+
+            if(passwordValue == ""){
+
+                doesFormHasError = true;
+
+                // Password was empty
+                alert("plese password is required");
+            }
+            else{
+                // Password valid 8-15 char
+                if(passwordValue.length >= 8){
+                    if(passwordValue.length <= 15){}
+                    else{
+
+                        doesFormHasError = true;
+
+                        alert("plese enter password 8-15 char");
+                        // Remove all char
+                        password.value = password.value.replace(/[a-zA-Z]/g,'');
+                        // Remove all spacial char & digit (aana(a-zA-Z) sivay(^) remove )
+                        password.value = password.value.replace(/[^a-zA-Z]/g,'');
+                    }
+                }
+                else{
+
+                    doesFormHasError = true;
+
+                    alert("plese enter password 8-15 char");
+                    // Remove all char
+                    password.value = password.value.replace(/[a-zA-Z]/g,'');
+                    // Remove all spacial char & digit (aana(a-zA-Z) sivay(^) remove )
+                    Password.value = Password.value.replace(/[^a-zA-Z]/g,'');
+                }
+            }
+
+            if (doesFormHasError == undefined) {
+                alert('Login sucessfully');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

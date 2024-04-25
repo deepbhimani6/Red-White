@@ -1,0 +1,79 @@
+<script type="text/javascript">
+
+
+    var a = parseInt(prompt("enter value of a :- "));
+    var b = parseInt(prompt("enter value of b :- "));
+    var c = parseInt(prompt("enter value of c :- "));
+
+
+    // simple function
+    function checkTriangleValid1(){
+
+        if((a+b+c) == 180){
+            document.write("triangle is valid");
+        }
+        else{
+            document.write("triangle is not valid");
+        }
+    }
+
+
+    // parameter function
+    function checkTriangleValid2(a,b,c){
+
+        if((a+b+c) == 180){
+            document.write("triangle is valid");
+        }
+        else{
+            document.write("triangle is not valid");
+        }
+    }
+
+
+    // return function
+    function checkTriangleValid3(){
+
+        var messge;
+
+        if((a+b+c) == 180){
+            messge = "triangle is valid";
+        }
+        else{
+            messge = "triangle is not valid";
+        }
+        
+        return document.write(messge);
+    }
+
+    
+    // return with parameter function
+    function checkTriangleValid4(a,b,c){
+
+        var messge;
+
+        if((a+b+c) == 180){
+            messge = "triangle is valid";
+        }
+        else{
+            messge = "triangle is not valid";
+        }
+
+        return document.write(messge);
+    }
+
+
+
+    document.write("simple function = ");
+    checkTriangleValid1();
+    
+    document.write("<br>parameter function = ");
+    checkTriangleValid2(a,b,c);
+
+    document.write("<br>return function = ");
+    checkTriangleValid3();
+
+    document.write("<br>return with parameter function = ");
+    checkTriangleValid4(a,b,c);
+
+
+</script>

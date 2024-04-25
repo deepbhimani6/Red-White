@@ -1,0 +1,24 @@
+<script type="text/javascript">
+
+
+    var i = 2;
+    var n = parseFloat(prompt("enter vlaue of n :- "));
+    var check = 0;
+
+    while(i < n){
+        if(n % i == 0){
+            check = 1;
+            break;
+        }
+        i++;
+    }
+
+    if(check == 1){
+        document.write("this is prime no");
+    }
+    else{
+        document.write("this is not prime no");
+    }
+
+
+</script>

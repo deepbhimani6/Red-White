@@ -1,0 +1,18 @@
+<script type="text/javascript">
+
+
+    var n1 = 0;
+    var n2 = 1;
+    var n = parseInt(prompt("enter value of n :- "));
+
+    document.write(n1+", "+n2+", ");
+
+    for(i=2 ; i < n ; i++){
+        var n3 = n1 + n2;
+        document.write(n3+", ");
+        n1 = n2;
+        n2 = n3;
+    }
+
+
+</script>

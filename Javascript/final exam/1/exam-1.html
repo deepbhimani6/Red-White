@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task - 1</title>
+</head>
+
+<body>
+    <table border="1" id="table"></table>
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    let studentdata = [{
+        grid: 1234,
+        name: "kaushik",
+        email: "kaushik@gmail.com",
+        phone: 9876734,
+        course: "php",
+        fees: 20000,
+        status: 'active'
+    },
+    {
+        grid: 1123,
+        name: "ajay",
+        email: "ajay@gmail.com",
+        phone: 9873412,
+        course: "react js",
+        fees: 40000,
+        status: 'active'
+    },
+    {
+        grid: 2222,
+        name: "ashish",
+        email: "ashish@gmail.com",
+        phone: 987451,
+        course: "node js",
+        fees: 40000,
+        status: 'dective'
+    },
+    {
+        grid: 7896,
+        name: "keyur",
+        email: "keyur@gmail.com",
+        phone: 763512,
+        course: "javascript",
+        fees: 15000,
+        status: 'active'
+    },
+    {
+        grid: 5678,
+        name: "ketul",
+        email: "ketul@gmail.com",
+        phone: 763412,
+        course: "photoshp",
+        fees: 10000,
+        status: 'active'
+    },
+    {
+        grid: 3456,
+        name: "mitesh",
+        email: "mitesh@gmail.com",
+        phone: 763412,
+        course: "photoshp",
+        fees: 10000,
+        status: 'deactive'
+    },
+    {
+        grid: 5321,
+        name: "mihir",
+        email: "mihir@gmail.com",
+        phone: 763412,
+        course: "photoshp",
+        fees: 10000,
+        status: 'active'
+    },
+    {
+        grid: 5678,
+        name: "ketul",
+        email: "ketul@gmail.com",
+        phone: 763412,
+        course: "photoshp",
+        fees: 10000,
+        status: 'active'
+    },
+    {
+        grid: 2222,
+        name: "ashish",
+        email: "ashish@gmail.com",
+        phone: 987451,
+        course: "node js",
+        fees: 40000,
+        status: 'dective'
+    },
+    {
+        grid: 7896,
+        name: "keyur",
+        email: "keyur@gmail.com",
+        phone: 763512,
+        course: "javascript",
+        fees: 15000,
+        status: 'active'
+    },
+    {
+        grid: 5678,
+        name: "ketul",
+        email: "ketul@gmail.com",
+        phone: 763412,
+        course: "photoshp",
+        fees: 10000,
+        status: 'active'
+    },
+    {
+        grid: 1123,
+        name: "ajay",
+        email: "ajay@gmail.com",
+        phone: 9873412,
+        course: "react js",
+        fees: 40000,
+        status: 'active'
+    },
+    {
+        grid: 2222,
+        name: "ashish",
+        email: "ashish@gmail.com",
+        phone: 987451,
+        course: "node js",
+        fees: 40000,
+        status: 'dective'
+    }];
+
+    data();
+    function data() {
+
+        let tbl = "";
+        tbl += `<tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>GRID</th>
+                    <th>Course</th>
+                    <th>Fees</th>
+                    <th>Status</th>
+                <tr>`
+
+        for (let i in studentdata) {
+            if(studentdata[i].status == "active")
+            tbl += `<tr>
+                        <td>${studentdata[i].name}</td>
+                        <td>${studentdata[i].email}</td>
+                        <td>${studentdata[i].phone}</td>
+                        <td>${studentdata[i].grid}</td>
+                        <td>${studentdata[i].course}</td>
+                        <td>${studentdata[i].fees}</td>
+                        <td>${studentdata[i].status}</td>
+                    <tr>`
+        }
+        document.getElementById('table').innerHTML = tbl;
+    }
+
+</script>

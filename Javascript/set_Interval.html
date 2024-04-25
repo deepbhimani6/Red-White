@@ -1,0 +1,43 @@
+<script type="text/javascript">
+
+    function bug(){
+        
+        let cnt = 0;
+        let a = setInterval(() => {
+            cnt++;
+            console.log("bug :- "+cnt);
+            if(cnt == 10){
+                clearInterval(a);
+            }
+        },1000);
+    }
+
+    function piz(){
+
+        let cnt = 0;
+        let a = setInterval(() => {
+            cnt++;
+            console.log("piz :- "+cnt);
+            if(cnt == 10){
+                clearInterval(a);
+            }
+        },2000);
+    }
+
+    function pan(){
+
+        let cnt = 0;
+        let a = setInterval(() => {
+            cnt++;
+            console.log("pan :- "+cnt);
+            if(cnt == 10){
+                clearInterval(a);
+            }
+        },3000);
+    }
+
+    bug();
+    piz();
+    pan();
+
+</script>

@@ -1,0 +1,154 @@
+<table border="1">
+    <input type="hidden" id="hiddenInput">
+    <tr>
+        <th>Name</th>
+        <td><input type="text" id="name"></td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td><input type="email" id="email"></td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td><input type="phone" id="phone"></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><input type="button" id="button" value="Submit" onclick="save()"></td>
+    </tr>
+</table>
+
+<br>
+
+<table id="tbldata" border="1">
+</table>
+
+<script type="text/javascript">
+
+    let data = [];
+    let hiddenInput = document.getElementById('hiddenInput');
+    let button = document.getElementById('button');
+    viewData();
+
+    function save() {
+
+        let username = document.getElementById('name').value;
+        let useremail = document.getElementById('email').value;
+        let userphone = document.getElementById('phone').value;
+
+        let obj = {
+            name: username,
+            email: useremail,
+            phone: userphone,
+        }
+
+        if (hiddenInput.value == "") {
+            if (localStorage.getItem('admin') === null || localStorage.getItem('admin') === undefined) {
+                alert("this is first data");
+                data.push(obj);
+                let st = JSON.stringify(data);
+                localStorage.setItem('admin', st);
+                viewData();
+            }
+            else {
+                alert("data already exists");
+                let value = localStorage.getItem('admin');
+                let val = JSON.parse(value);
+                data = val;
+                data.push(obj);
+                let st = JSON.stringify(data);
+                localStorage.setItem('admin', st);
+                viewData();
+            }
+            alert("your data sucessfully added");
+        }
+        else {
+            button.value = "Submit";
+            phone = hiddenInput.value;
+            let value = localStorage.getItem('admin');
+            let val = JSON.parse(value);
+
+            for (let i in val) {
+                if (val[i].phone == phone) {
+                    val[i] = obj;
+                }
+            }
+
+            let st = JSON.stringify(val);
+            localStorage.setItem('admin', st);
+            hiddenInput.value = "";
+            alert("your data sucessfully edited");
+            viewData();
+        }
+
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('phone').value = "";
+    }
+
+    function viewData() {
+
+        let value = localStorage.getItem('admin');
+        let val = JSON.parse(value);
+
+        let table = "";
+        table += `<tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>`
+
+        for (let i in val) {
+            table += `<tr>
+                        <td>${val[i].name}</td>
+                        <td>${val[i].email}</td>
+                        <td>${val[i].phone}</td>
+                        <td>
+                            <button onclick="deleteData('${val[i].phone}')">Delete</button>
+                            ||
+                            <button onclick="editData('${val[i].phone}')">Edit</button>
+                        </td>
+                    </tr>`
+        }
+
+        document.getElementById('tbldata').innerHTML = table;
+    }
+
+    function deleteData(phone) {
+
+        let value = localStorage.getItem('admin');
+        let val = JSON.parse(value);
+
+        for (let i in val) {
+            if (val[i].phone == phone) {
+                val.splice(i, 1);
+            }
+        }
+
+        let st = JSON.stringify(val);
+        localStorage.setItem('admin', st);
+        viewData();
+    }
+
+    function editData(phone) {
+
+        button.value = "Edit";
+        hiddenInput.value = phone;
+        let value = localStorage.getItem('admin');
+        let val = JSON.parse(value);
+
+        for (let i in val) {
+            if (val[i].phone == phone) {
+                document.getElementById('name').value = val[i].name;
+                document.getElementById('email').value = val[i].email;
+                document.getElementById('phone').value = val[i].phone;
+            }
+        }
+
+        let st = JSON.stringify(val);
+        localStorage.setItem('admin', st);
+        viewData();
+    }
+
+</script>

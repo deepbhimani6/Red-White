@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+
+    var a = parseInt(prompt("enter value of a :- "));
+    var b = parseInt(prompt("enter value of b :- "));
+    var operator = prompt('+ , - , * , /');
+    
+
+    // simple function
+
+    function basicCalculator(){
+
+        switch(operator){
+            
+            case('+'):
+            document.write("addition = "+(a+b));
+            break;
+
+            case('-'):
+            document.write("subtraction = "+(a-b));
+            break;
+
+            case('*'):
+            document.write("multiplication = "+(a*b));
+            break;
+
+            case('/'):
+            document.write("division = "+(a/b));
+            break;
+
+            default:
+            document.write("wrong value");
+        }
+    }
+
+
+    
+    document.write("simple function<br>")
+    basicCalculator();
+
+
+</script>

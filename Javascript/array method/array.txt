@@ -1,0 +1,42 @@
+Q1 :- array sort method નો use કરવાનો છે.
+
+Q2 :- arry ને reverce માં print કરવાનો છે.
+
+Q3 :- તમે જે array input કરાવો છો એમાંથી last element remove થવો જોઈએ.
+
+Q4 :- તમે જે array input કરાવો છો એમાંથી first element add થવો જોઈએ.
+
+Q5:- 2 array લેવાના છે અને તેમને join કરાવીને print કરાવાના છે.
+
+Q6 :- એક string લેવાની છે.
+ex :- var st = "HELLO WORLD";
+output :- hello word આવું આવવું જોઈએ.
+
+Q7 :- string ને array માં convert કરવાનું છે.
+
+Q8 :- string ને repelace કરવાનું છે.
+ex :- var str = "Red and White";
+output :- Orange and White
+
+Q9 :- જેટલા element input કરાવો છો એ બધાનો sum થવો જોઈએ.
+ex var arr = [1,2,3,4,10];
+output :- sum = 20
+
+Q10 :- array element માંથી 0 થી નાની value find થવી જોઈએ.
+ex :- var array = [12,-1,45,-4,-56,23,-11,-89,3,-2]
+output :- -1,-4,-56,-11,-89,-2
+
+Q11 :- array element માંથી minimum and maximum find કરવાના છે.
+ex var array = [10,45,23,3,8,50];
+output :- maximum no :- 50
+minimum no :- 3
+
+Q12 :- string માંથી string create કરવાની છે.
+ex var str = "hello world how r u"
+આમાંથી how નામની string output માં આવવી જોઈએ.
+
+Q13 :- array element માંથી ડુપ્લીકેટ element find થવા જોઈએ.
+
+Q14 :- array element ને string માં convert કરવાનું છે.
+ex var array :- ["hello","world"]
+output :- hello,world

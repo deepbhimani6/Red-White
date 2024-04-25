@@ -1,0 +1,71 @@
+<table border="1" id="tbldata">
+</table>
+
+<script>
+
+    let data = [
+        {
+            name : "A",
+            email : "a@gmail.com",
+            phone : 12345,
+            course : ["c","c++"]
+        },
+        {
+            name : "B",
+            email : "b@gmail.com",
+            phone : 678910,
+            course : ["html","css"]
+        },
+        {
+            name : "c",
+            email : "c@gmail.com",
+            phone : 621458,
+            course : ["java","php"]
+        }
+    ];
+
+    let name = prompt("enter name :- ");
+
+    let email = prompt("enter email :- ");
+
+    let phone = parseInt(prompt("enter phone no :- "));
+
+    let course = [];
+    let size = parseInt(prompt("enter course count :- "));
+    for(let j=0 ; j<size ; j++){
+        course[j] = prompt("enter course name :- ");
+        course.push(course[j]);
+    }
+
+    let obj = {
+        name : name,
+        email : email,
+        phone : phone,
+        course : course
+    }
+
+    data.push(obj);
+
+    console.log(data);
+
+    let row = "";
+    row += `<tr>
+                <td>name</td>
+                <td>email</td>
+                <td>phone</td>
+                <td>course</td>
+            </tr>`;
+
+    for(let i in data)
+    {
+        row += `<tr>
+                    <td>${data[i].name}</td>
+                    <td>${data[i].email}</td>
+                    <td>${data[i].phone}</td>
+                    <td>${data[i].course}</td>
+                </tr>`;
+    }
+    
+    document.getElementById('tbldata').innerHTML = row;
+
+</script>

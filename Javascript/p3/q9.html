@@ -1,0 +1,116 @@
+<script type="text/javascript">
+
+
+    var a = parseInt(prompt("enter value of a :- "));
+    var b = parseInt(prompt("enter value of b :- "));
+    var c = parseInt(prompt("enter value of c :- "));
+
+    // simple function
+    function findMaxFunction1(){
+
+        if(a > b){
+            if(a > c){
+                document.write(a+" is a bigger than all");
+            }
+            else{
+                document.write(c+" is c bigger than all");
+            }
+        }
+        else{
+            if(b > c){
+                document.write(b+" is b bigger than all");
+            }
+            else{
+                document.write(c+" is c bigger than all");
+            }
+        }
+    }
+
+    
+    // parameter function
+    function findMaxFunction2(a,b,c){
+
+        if(a > b){
+            if(a > c){
+                document.write(a+" is a bigger than all");
+            }
+            else{
+                document.write(c+" is c bigger than all");
+            }
+        }
+        else{
+            if(b > c){
+                document.write(b+" is b bigger than all");
+            }
+            else{
+                document.write(c+" is c bigger than all");
+            }
+        }
+    }
+    
+
+    // return function
+    function findMaxFunction3(){
+
+        var messge;
+
+        if(a > b){
+            if(a > c){
+                messge = a+" is a bigger than all";
+            }
+            else{
+                messge = c+" is c bigger than all";
+            }
+        }
+        else{
+            if(b > c){
+                messge = b+" is b bigger than all";
+            }
+            else{
+                messge = c+" is c bigger than all";
+            }
+        }
+    return document.write(messge);
+    }
+
+
+    // return with parameter function
+    function findMaxFunction4(a,b,c){
+
+        var messge;
+
+        if(a > b){
+            if(a > c){
+                messge = a+" is a bigger than all";
+            }
+            else{
+                messge = c+" is c bigger than all";
+            }
+        }
+        else{
+            if(b > c){
+                messge = b+" is b bigger than all";
+            }
+            else{
+                messge = c+" is c bigger than all";
+            }
+        }
+        return document.write(messge);
+    }
+
+     
+    
+    document.write("simple function<br>")
+    findMaxFunction1();
+
+    document.write("<br><br>parameter function<br>")
+    findMaxFunction2(a,b,c);
+
+    document.write("<br><br>return function<br>")
+    var ans = findMaxFunction3();
+
+    document.write("<br><br>return with parameter function<br>");
+    var ans = findMaxFunction4(a,b,c);
+
+
+</script>

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+
+    let a = parseInt(prompt("enter value of a :- "));
+    let b = parseInt(prompt("enter value of b :- "));
+
+    class demo{
+
+        sum(){ //member function
+            document.write("sum = "+(a+b));
+        }
+
+        min(){
+            if(a > b){
+                document.write("<br>min = "+(a-b));
+            }
+            else{
+                document.write("<br>min = "+(b-a));
+            }
+        }
+
+        div(){
+            if (a > b){
+                document.write("<br>div = "+(a/b));
+            }
+            else{
+                document.write("<br>div = "+(b/a));
+            }
+        }
+
+        mul(a,b){
+            document.write("<br>mul = "+(a*b));
+        }
+    }
+
+    document.write("i am print only positive value<br><br>");
+
+    let obj = new demo();
+    obj.sum();
+    obj.min();
+    obj.div();
+    obj.mul(a,b);
+
+</script>

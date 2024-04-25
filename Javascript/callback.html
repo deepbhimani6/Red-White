@@ -1,0 +1,45 @@
+<script type="text/javascript">
+
+    function bug(callback){
+
+        setTimeout(() => {
+            console.log("bug");
+            callback();
+        },1000);
+    }
+
+    function piz(callback){
+
+        setTimeout(() => {
+            console.log("piz");
+            callback();
+        },2000);
+    }
+
+    function pan(callback){
+
+        setTimeout((zz) => {
+            console.log("pan");
+            callback();
+        },3000);
+    }
+
+    function end(){
+
+        setTimeout(() => {
+            console.log("end all function");
+        },1000);
+    }
+
+
+    bug(function(){
+        piz(function(){
+            pan(function(){
+                end();
+            });
+        });
+    });
+
+    console.log("all function activate..!");
+
+</script>

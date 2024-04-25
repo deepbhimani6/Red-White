@@ -1,0 +1,70 @@
+.<script type="text/javascript">
+
+
+    var a = parseInt(prompt("enter value of a :- "));
+    var b = parseInt(prompt("enter value of b :- "));
+
+
+    // simple function
+    function sf(){
+
+        var sum = a + b;
+        var first = sum - a;
+        var second = sum - first;
+
+        document.write("a = "+first+"<br>"+"b = "+second);
+    }
+
+
+    // parameter function
+    function pf(a,b){
+
+        var c;
+
+        c = a;
+        a = b;
+        b = c;
+
+        document.write("a = "+a+"<br>"+"b = "+b);
+    }
+
+
+    // return function
+    function rf(){
+
+        var sum = a + b;
+        var first = sum - a;
+        var second = sum - first;
+
+        return document.write("a = "+first+"<br>"+"b = "+second);
+    }
+
+
+    // return with parameter function
+    function rpf(a,b){
+
+        var c;
+
+        c = a;
+        a = b;
+        b = c;
+
+        return document.write("a = "+a+"<br>"+"b = "+b);
+    }
+
+    
+    
+    document.write("simple function<br>")
+    sf();
+    
+    document.write("<br><br>parameter function<br>");
+    pf(a,b);
+    
+    document.write("<br><br>return function<br>");
+    var ans = rf();
+    
+    document.write("<br><br>return with parameter function<br>");
+    var ans = rpf(a,b);
+
+
+</script>

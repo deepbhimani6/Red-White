@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax-api call</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+
+    <div id="menu" class="row d-flex justify-content-between mx-5"></div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        function save() {
+
+            $.ajax({
+
+                url: "https://foodbukka.herokuapp.com/api/v1/menu",
+                type: "GET",
+                success: function (allData) {
+
+                    let tab = "";
+                    console.log(allData.Result);
+
+                    for (let i = 0; i < allData.Result.length; i++) {
+
+                        tab += `<div class="card my-3" style="width: 18rem;">
+                                    <div class="card-body">`
+
+                        for (let j = 0; j < allData.Result[i].images.length; j++) {
+
+                            tab += `<img class="card-img-top" style="width:76px;" src="${allData.Result[i].images[j]}" alt="Card image cap">`
+                        }
+
+                        tab += `        <h5 class="card-title">${allData.Result[i].menuname}</h5>
+                                        <p class="card-text">${allData.Result[i].description}</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                                <br>`
+                    }
+                    document.getElementById('menu').innerHTML = tab;
+                }
+            });
+        }
+
+        save();
+
+    </script>
+
+</body>
+
+</html>

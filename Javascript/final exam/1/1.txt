@@ -1,0 +1,135 @@
+Task 1 :- student details deactive student not show in table.
+
+Task 2 :- total count active student.
+
+Task 3 : duplicate grid not show student in table active student
+
+Task 4 : total count in node js active student
+
+Task 5 : total fees sum in javascript active student
+
+Task 6 : total show photoshop student in table and count active student
+
+Task 7 :- find student javascript and node js show in table and fees sum active student
+
+Task 8:- find a node js course student show in table duplicate grid not show
+
+
+let studentdata = [
+    {
+        grid : 1234,
+        name : "kaushik",
+        email : "kaushik@gmail.com",
+        phone : 9876734,
+        course : "php",
+        fees : 20000,
+        status : 'active'
+    },
+    {
+        grid : 1123,
+        name : "ajay",
+        email : "ajay@gmail.com",
+        phone : 9873412,
+        course : "react js",
+        fees : 40000,
+        status : 'active'
+    },
+    {
+        grid : 2222,
+        name : "ashish",
+        email : "ashish@gmail.com",
+        phone : 987451,
+        course : "node js",
+        fees : 40000,
+        status : 'dective'
+    },
+    {
+        grid : 7896,
+        name : "keyur",
+        email : "keyur@gmail.com",
+        phone : 763512,
+        course : "javascript",
+        fees : 15000,
+        status : 'active'
+    },
+    {
+        grid : 5678,
+        name : "ketul",
+        email : "ketul@gmail.com",
+        phone : 763412,
+        course : "photoshp",
+        fees : 10000,
+        status : 'active'
+    },
+    {
+        grid : 3456,
+        name : "mitesh",
+        email : "mitesh@gmail.com",
+        phone : 763412,
+        course : "photoshp",
+        fees : 10000,
+        status : 'deactive'
+    },
+    {
+        grid : 5321,
+        name : "mihir",
+        email : "mihir@gmail.com",
+        phone : 763412,
+        course : "photoshp",
+        fees : 10000,
+        status : 'active'
+    },
+    {
+        grid : 5678,
+        name : "ketul",
+        email : "ketul@gmail.com",
+        phone : 763412,
+        course : "photoshp",
+        fees : 10000,
+        status : 'active'
+    },
+    {
+        grid : 2222,
+        name : "ashish",
+        email : "ashish@gmail.com",
+        phone : 987451,
+        course : "node js",
+        fees : 40000,
+        status : 'dective'
+    },
+    {
+        grid : 7896,
+        name : "keyur",
+        email : "keyur@gmail.com",
+        phone : 763512,
+        course : "javascript",
+        fees : 15000,
+        status : 'active'
+    },
+    {
+        grid : 5678,
+        name : "ketul",
+        email : "ketul@gmail.com",
+        phone : 763412,
+        course : "photoshp",
+        fees : 10000,
+        status : 'active'
+    },
+    {
+        grid : 1123,
+        name : "ajay",
+        email : "ajay@gmail.com",
+        phone : 9873412,
+        course : "react js",
+        fees : 40000,
+        status : 'active'
+    },
+    {
+        grid : 2222,
+        name : "ashish",
+        email : "ashish@gmail.com",
+        phone : 987451,
+        course : "node js",
+        fees : 40000,
+        status : 'dective'
+    }];

@@ -1,0 +1,57 @@
+1) Write a javascript program to swap variable using all function use. (10 marks)
+
+2) Wriate a javascript program to create array a[12,34,56,2,18,45,78,44]. (5 marks)
+(remove 3 element in array and print after array :- 12,34,56,18,45,78,44)
+
+3) Write a javascript program to number divisible 5 and 15. (5 marks)
+
+4) Write a javascript program to check whether number is palindrome or not palindrome using
+do while loop and return with no parameter function use.(5 marks)
+(ex :- 123 output :- 321)
+
+5) Write a javascript program create object and data show in your html table. (25 marks)
+   Task 1 :- student fees 10,000 up and 20,000 low total find student in print table.
+
+let studentdata = [
+        {
+            name: "abc",
+            email: "abc@gmail.com",
+            phone: 9876734512,
+            course: "node js",
+            fees: 40000,
+            status: "active"
+        },
+        {
+            name: "xyz",
+            email: "xyz@gmail.com",
+            phone: 9934565465,
+            course: "javascript",
+            fees: 15000,
+            status: "deactive"
+        },
+        {
+            name: "pqr",
+            email: "pqr@gmail.com",
+            phone: 9876543210,
+            course: "photoshop",
+            fees: 10000,
+            status: "active"
+        },
+        {
+
+            name: "def",
+            email: "def@gmail.com",
+            phone: 8877665544,
+            course: "CCC",
+            fees: 6000,
+            status: "active"
+        },
+        {
+            name: "ghi",
+            email: "ghi@gmail.com",
+            phone: 6540455055,
+            course: "php",
+            fees: 20000,
+            status: "deactive"
+        }
+    ];

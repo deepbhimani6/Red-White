@@ -1,0 +1,37 @@
+<script type="text/javascript">
+
+
+    var Physics     = parseInt(prompt("enter marks for Physics :-"));
+    var Chemistry   = parseInt(prompt("enter marks for Chemistry :-"));
+    var Biology     = parseInt(prompt("enter marks for Biology :-"));
+    var Mathematics = parseInt(prompt("enter marks for Mathematics :-"));
+    var Computer    = parseInt(prompt("enter marks for Computer :-"));
+    
+
+    total = Physics + Chemistry + Biology + Mathematics + Computer;
+    Percentage = total / 5;
+
+    if(Percentage >= 90){
+        document.write(Percentage+"% is deserve Grade A");
+    }
+    else if(Percentage >= 80 && Percentage <= 89){
+        document.write(Percentage+"% is deserve Grade B");
+    }
+    else if(Percentage >= 70 && Percentage <= 79){
+        document.write(Percentage+"% is deserve Grade C");
+    }
+    else if(Percentage >= 60 && Percentage <= 69){
+        document.write(Percentage+"% is deserve Grade D");
+    }
+    else if(Percentage >= 50 && Percentage <= 59){
+        document.write(Percentage+"% is deserve Grade E");
+    }
+    else if(Percentage >= 40 && Percentage <= 49){
+        document.write(Percentage+"% is deserve Grade F");
+    }
+    else{
+        document.write(Percentage+"% is deserve Fail")
+    }
+
+
+</script>

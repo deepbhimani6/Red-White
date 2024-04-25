@@ -1,0 +1,52 @@
+<style>
+    .td {
+        height: 30px;
+        width: 30px;
+        border: 1.5px solid grey;
+        border-style: inset;
+    }
+
+    .black_td {
+        background-color: black;
+    }
+
+    .white_td {
+        background-color: white;
+    }
+</style>
+
+<body></body>
+
+<script type="text/javascript">
+
+    document.body.style.backgroundColor = '#FF0000';
+
+    var table = document.createElement('table');
+    document.body.appendChild(table);
+    table.style.margin = '0 auto';
+    table.style.marginTop = '200px';
+
+
+    for (let i = 0; i < 8; i++) {
+
+        var tr = document.createElement('tr');
+        table.appendChild(tr);
+
+        for (let j = 0; j < 8; j++) {
+
+            var td = document.createElement('td');
+            tr.appendChild(td);
+
+            if ((i + j) % 2 == 0) {
+                td.setAttribute('class', 'td white_td');
+            }
+            else {
+                td.setAttribute('class', 'td black_td');
+            }
+        }
+    }
+
+    table.setAttribute('cellspacing', '0');
+    table.setAttribute('width', '270px');
+
+</script>

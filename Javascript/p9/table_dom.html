@@ -1,0 +1,34 @@
+<input style="margin-bottom: 20px;" type="button" value="Generate a table" onclick="generateTable()">
+
+<script type="text/javascript">
+
+    let row = parseInt(prompt("row :- "));
+    let coloumn = parseInt(prompt("coloumn :- "));
+
+    function generateTable() {
+
+        let table = document.createElement("table");
+        let tableBody = document.createElement("tbody");
+
+        for (let i = 0; i < row; i++) {
+            // creates row
+            let row = document.createElement("tr");
+
+            for (let j = 0; j < coloumn; j++) {
+                // Create coloumn
+                let column = document.createElement("td");
+                let columnText = document.createTextNode(`row ${i}, column ${j}`);
+                column.appendChild(columnText);
+                row.appendChild(column);
+            }
+
+            tableBody.appendChild(row);
+        }
+        
+        document.body.appendChild(table);
+        table.appendChild(tableBody);
+        table.setAttribute("border", "1");
+        table.style.marginBottom = '20px';
+    }
+
+</script>

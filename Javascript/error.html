@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+    let a = parseInt(prompt("enter value of a :- "));
+    let b = parseInt(prompt("enter value of b :- "));
+
+    try{
+        if (b == 0) {
+            console.log("you can't divide by 0");
+        }
+        else{
+            let ans = a / b;
+            console.log("ans = "+ans);
+        }
+    }
+    catch(err){
+        console.log(err);
+    }
+
+</script>

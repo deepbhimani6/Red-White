@@ -1,0 +1,88 @@
+<body></body>
+
+<script type="text/javascript">
+
+    // body style
+    document.body.style.backgroundColor = 'black';
+
+    // from
+    let form = document.createElement('form');
+    document.body.appendChild(form);
+    form.id = 'formdata';
+    form.style.display = 'flex';
+    form.style.justifyContent = 'center';
+    form.style.marginTop = '250px';
+
+    // table
+    let table = document.createElement('table');
+    form.appendChild(table);
+    table.setAttribute('border', 1);
+    table.style.color = '#00FF00';
+    // table.style.border = 'red';
+    table.setAttribute('border', 'red')
+    table.style.fontSize = '30px';
+
+    // tr1
+    let tr1 = document.createElement('tr');
+    table.appendChild(tr1);
+
+    // tr1 = td1-4
+    let td1 = document.createElement('td');
+    tr1.appendChild(td1);
+    td1.innerHTML = 'name';
+
+    let td2 = document.createElement('td');
+    tr1.appendChild(td2);
+    td2.innerHTML = 'email';
+
+    let td3 = document.createElement('td');
+    tr1.appendChild(td3);
+    td3.innerHTML = 'password';
+
+    let td4 = document.createElement('td');
+    tr1.appendChild(td4);
+    td4.innerHTML = 'phone';
+
+    // tr2
+    let tr2 = document.createElement('tr');
+    table.appendChild(tr2);
+
+    // tr2 = td1-4
+    let td5 = document.createElement('td');
+    tr2.appendChild(td5);
+    td5.innerHTML = 'a';
+
+    let td6 = document.createElement('td');
+    tr2.appendChild(td6);
+    td6.innerHTML = 'a@gmail.com';
+
+    let td7 = document.createElement('td');
+    tr2.appendChild(td7);
+    td7.innerHTML = 'a123';
+
+    let td8 = document.createElement('td');
+    tr2.appendChild(td8);
+    td8.innerHTML = '123';
+
+    // tr3
+    let tr3 = document.createElement('tr');
+    table.appendChild(tr3);
+
+    // tr2 = td1-4
+    let td9 = document.createElement('td');
+    tr3.appendChild(td9);
+    td9.innerHTML = 'b';
+
+    let td10 = document.createElement('td');
+    tr3.appendChild(td10);
+    td10.innerHTML = 'b@gmail.com';
+
+    let td11 = document.createElement('td');
+    tr3.appendChild(td11);
+    td11.innerHTML = 'b456';
+
+    let td12 = document.createElement('td');
+    tr3.appendChild(td12);
+    td12.innerHTML = '456';
+
+</script>

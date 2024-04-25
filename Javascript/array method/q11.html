@@ -1,0 +1,27 @@
+<script type="text/javascript">
+
+    var arr = [10,45,23,3,8,50];
+
+    function findMinMaxElement(arr){
+
+        var maximum = arr[0];
+        var minimum = arr[0];
+
+        for(var i=0 ; i<arr.length ; i++){
+            if (maximum < arr[i]){
+                maximum = arr[i];
+            }
+            else{
+                minimum = arr[i];
+            }
+        }
+        
+        var result =  ([document.write("max element in arr :- "+maximum+"<br>"),
+                        document.write("min element in arr :- "+minimum)]); 
+        return result;
+    }
+
+    document.write("Enter elements of arr :- ["+arr+"]<br>")
+    document.write(findMinMaxElement(arr));
+    
+</script>

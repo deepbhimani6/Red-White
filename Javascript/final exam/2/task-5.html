@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task - 1</title>
+</head>
+
+<body>
+    <table border="1" id="table"></table>
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    let studentdata = [
+        {
+            name: "abc",
+            email: "abc@gmail.com",
+            phone: 9876734512,
+            course: "node js",
+            fees: 40000,
+            status: "active"
+        },
+        {
+            name: "xyz",
+            email: "xyz@gmail.com",
+            phone: 9934565465,
+            course: "javascript",
+            fees: 15000,
+            status: "deactive"
+        },
+        {
+            name: "pqr",
+            email: "pqr@gmail.com",
+            phone: 9876543210,
+            course: "photoshop",
+            fees: 10000,
+            status: "active"
+        },
+        {
+
+            name: "def",
+            email: "def@gmail.com",
+            phone: 8877665544,
+            course: "CCC",
+            fees: 6000,
+            status: "active"
+        },
+        {
+            name: "ghi",
+            email: "ghi@gmail.com",
+            phone: 6540455055,
+            course: "php",
+            fees: 20000,
+            status: "deactive"
+        }
+    ];
+
+    data();
+    function data() {
+
+        let tbl = "";
+        tbl += `<tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Course</th>
+                    <th>Fees</th>
+                    <th>Status</th>
+                <tr>`
+
+        for (let i in studentdata) {
+            if (studentdata[i].fees > 10000 && studentdata[i].fees < 20000)
+                tbl += `<tr>
+                        <td>${studentdata[i].name}</td>
+                        <td>${studentdata[i].email}</td>
+                        <td>${studentdata[i].phone}</td>
+                        <td>${studentdata[i].course}</td>
+                        <td>${studentdata[i].fees}</td>
+                        <td>${studentdata[i].status}</td>
+                    <tr>`
+        }
+        document.getElementById('table').innerHTML = tbl;
+    }
+
+</script>
