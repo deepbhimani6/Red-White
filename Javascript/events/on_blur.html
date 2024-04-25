@@ -1,0 +1,13 @@
+<label for="">name :- </label>
+<input type="text" id="name" onblur="myfun()">
+                        <!-- out side mouse click par event -->
+                        <!-- ફોર્મ validation આપવા માટે use થાય છે -->
+
+<script>
+
+    let myfun = () => {
+        let name = document.getElementById('name');
+        name.value = name.value.toLowerCase();
+    }
+
+</script>
